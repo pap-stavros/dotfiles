@@ -1,0 +1,126 @@
+*{
+	font: "JetBrainsMono Nerd Font 12";		//Font - matching your rofi config
+	//Colors - based on your rofi colors.rasi
+	foreground:#cfcfcf; 				//Text - matches your rofi foreground
+	background:#1c1c1c; 				//Background - matches your rofi background
+	accent:#cfcfcf; 					//Highlight - using your selected color
+	foreground-selection:@foreground; 	//Selection_fg
+	background-selection:#cfcfcf; 		//Selection_bg - matches your selected color
+	transparent:					#ffffff00;
+	background-color:				@transparent;
+	text-color:						@foreground;
+	selected-normal-foreground:		@background;  // Dark text on light selection
+	normal-foreground:       		@foreground;
+	alternate-normal-background:	@transparent;
+	selected-urgent-foreground:  	@background;
+	urgent-foreground:           	@foreground;
+	alternate-urgent-background: 	@background;
+	active-foreground:           	@accent;
+	selected-active-foreground:  	@background;
+	alternate-normal-foreground: 	@foreground;
+	alternate-active-background: 	@background;
+	bordercolor:                 	@background;
+	normal-background:           	@transparent;
+	selected-normal-background:  	@background-selection;
+	separatorcolor:              	@accent;
+	urgent-background:           	@accent;
+	alternate-urgent-foreground: 	@foreground;
+	selected-urgent-background:  	@accent;
+	alternate-active-foreground: 	@foreground;
+	selected-active-background:  	@background-selection;
+	active-background:           	@transparent;
+}
+window {
+	text-color:			@foreground;
+	background-color:	@background;
+	border-radius: 		20px;  // Matching your rofi's rounded corners
+	padding: 			15;     // Slightly increased padding
+	width: 800px;
+}
+mainbox {
+	border:		0;
+	padding: 	5;
+}
+textbox {
+	text-color: @foreground;
+}
+listview {
+	spacing:		8px;     // Increased spacing for better visual separation
+	dynamic:		true;
+	fixed-height:	false;
+	border:			0;
+	scrollbar:		false;
+	text-color:		@foreground;
+	lines:			7;       // Matching your rofi listview lines
+}
+element {
+	border:			0;
+	padding:		8px;     // Increased padding to match rofi element padding
+	border-radius:	15px;    // Matching your rofi selected element border-radius
+}
+element-text {
+	background-color: inherit;
+	text-color:       inherit;
+}
+element.normal.normal {
+	text-color:			@normal-foreground;
+	background-color:	@normal-background;
+}
+element.normal.urgent {
+	text-color:			@urgent-foreground;
+	background-color:	@urgent-background;
+}
+element.normal.active {
+	text-color:			@active-foreground;
+	background-color:	@active-background;
+}
+element.selected.normal {
+	text-color:			@selected-normal-foreground;
+	background-color:	@selected-normal-background;
+}
+element.selected.urgent {
+	text-color:			@selected-urgent-foreground;
+	background-color:	@selected-urgent-background;
+}
+element.selected.active {
+	text-color:			@selected-active-foreground;
+	background-color:	@selected-active-background;
+}
+element.alternate.normal {
+	text-color:			@alternate-normal-foreground;
+	background-color:	@alternate-normal-background;
+}
+element.alternate.urgent {
+	text-color:			@alternate-urgent-foreground;
+	background-color:	@alternate-urgent-background;
+}
+element.alternate.active {
+	text-color:			@alternate-active-foreground;
+	background-color:	@alternate-active-background;
+}
+mode-switcher {
+	border:	0;
+}
+button selected {
+	text-color:			@selected-normal-foreground;
+	background-color:	@selected-normal-background;
+	border-radius:		15px;    // Adding rounded corners to selected buttons
+}
+button normal {
+	text-color:	@foreground;
+}
+inputbar {
+	children: [textbox-prompt-colon,entry];
+	padding: 5px;
+	border-radius: 5px;  // Matching your rofi inputbar styling
+}
+textbox-prompt-colon{
+	expand:	false;
+	margin: 0;
+	str:	":";
+}
+entry {
+	placeholder:	"";
+	padding: 5px;
+	text-color: @accent;
+}
