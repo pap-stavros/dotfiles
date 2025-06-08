@@ -9,6 +9,6 @@ Personal dotfiles for backup and syncing across systems.
 - Rofi config
 - Ronema (custom rofi/network config)
 - Waybar config
-- oh-my-zsh and .zshrc
+- .zshrc config
 
 probably needs a bunch of dependencies and i really dont care enough to find out right now.
