@@ -6,9 +6,6 @@ Personal dotfiles for backup and syncing across systems.
 
 - Kitty terminal emulator config
 - Hyprland compositor config
-- Rofi config
-- Ronema (custom rofi/network config)
-- Waybar config
 - .zshrc config
 
 probably needs a bunch of dependencies and i really dont care enough to find out right now.
